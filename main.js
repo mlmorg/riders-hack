@@ -1,7 +1,7 @@
 (function () {
 
   var tileUrl = 'http://a.tiles.mapbox.com/v3/mlmorg.gfnol46k/{z}/{x}/{y}.png';
-  var iconUrl = 'http://a.tiles.mapbox.com/v3/marker/pin-l-{text}+{color}.png';
+  var iconUrl = 'http://a.tiles.mapbox.com/v3/marker/pin-{size}-{text}+{color}.png';
 
   function Riders () {
     this.map = document.getElementById('map');
@@ -24,7 +24,20 @@
 
   Riders.prototype.addTown = function (latlng) {
     var marker = this.addMarker(latlng);
-    marker.on('click', this.showSummary.bind(this));
+    var that = this;
+    
+    marker.defaultIcon = function () {
+      this.setIcon(that.createIcon());
+    };
+
+    marker.on('click', function () {
+      if (that.lastMarker) {
+        that.lastMarker.defaultIcon();
+      }
+      marker.setIcon(that.createIcon({ size: 'l' }));
+      that.showSummary();
+      that.lastMarker = marker;
+    });
   };
 
   Riders.prototype.showSummary = function () {
@@ -52,12 +65,19 @@
     options = L.Util.extend({
       text: 'village',
       color: '#7ec9b1',
-      iconSize: [35, 90],
-      iconAnchor: [18, 45]
-    });
+      size: 'm',
+      iconSize: [30, 70],
+      iconAnchor: [15, 35]
+    }, options);
+
+    if (options.size === 'l') {
+      options.iconSize = [35, 90];
+      options.iconAnchor = [17, 45];
+    }
 
     options.iconUrl = options.iconUrl || L.Util.template(iconUrl, {
       text: options.text,
+      size: options.size,
       color: options.color.replace('#', '')
     });
 
