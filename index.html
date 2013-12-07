@@ -7,38 +7,39 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar-inner flexbox text-center full-page">
-        <div class="flexbox-item vertical-center">
-          <ul class="unstyled nav clearfix">
-            <li><button class="selected">Blood</button></li>
-            <li><button>HIV+</button></li>
-            <li><button>Pregnancy</button></li>
-            <li><button>Immunization</button></li>
-            <li><button>Medicine</button></li>
-          </ul>
+    <div id="map-screen" class="full-page screen">
+      <div class="navbar">
+        <div class="navbar-inner flexbox text-center full-page">
+          <div class="flexbox-item vertical-center">
+            <ul class="unstyled nav clearfix">
+              <li><button class="selected">Blood</button></li>
+              <li><button>HIV+</button></li>
+              <li><button>Pregnancy</button></li>
+              <li><button>Immunization</button></li>
+              <li><button>Medicine</button></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="page-container">
-      <div id="map-screen" class="full-page">
+      <div class="page-container">
         <div id="map" class="full-page"></div>
       </div>
-      <div id="detail-screen" class="full-page hide">
+      <div id="summary" class="summary-bar">
+        <div class="flexbox full-page">
+          <div class="flexbox-item">
+            <h1>Name of Town</h1>
+            <h3>30 kilometers</h3>
+            <h3>65 People</h3>
+          </div>
+          <div class="summary-side flexbox-item text-center vertical-center text-urgent">
+            <h2>4</h2>
+            <h4>Urgent</h4>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="summary" class="summary-bar">
-      <div class="flexbox full-page">
-        <div class="flexbox-item">
-          <h1>Name of Town</h1>
-          <h3>30 kilometers</h3>
-          <h3>65 People</h3>
-        </div>
-        <div class="summary-side flexbox-item text-center vertical-center text-urgent">
-          <h2>4</h2>
-          <h4>Urgent</h4>
-        </div>
-      </div>
+    <div id="detail-screen" class="full-page screen out-right">
+      <h1>Name of Town</h1>
     </div>
 
     <script src="bower_components/leaflet-dist/leaflet-src.js"></script>

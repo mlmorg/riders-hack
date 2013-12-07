@@ -9,6 +9,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
   color: #222;
+  overflow: hidden;
 }
 
 * { box-sizing: border-box; }
@@ -46,10 +47,21 @@ h4 {
   text-transform: uppercase;
 }
 
+/* Screens */
+
+.screen {
+  position: absolute;
+  transition: 300ms left ease;
+  left: 0;
+}
+
+.screen.out-right { left: 100%; }
+.screen.out-left { left: -100%; }
+
 /* Navbar */
 
 .navbar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 50px;
   top: 0;
@@ -67,7 +79,7 @@ h4 {
 /* Summary Bar */
 
 .summary-bar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100px;
   bottom: -100px;
@@ -76,6 +88,7 @@ h4 {
   border-top: 1px solid #ccc;
   z-index: 1001;
   transition: bottom 200ms ease;
+  cursor: pointer;
 }
 
 .summary-bar.show {
