@@ -1,0 +1,41 @@
+.info {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.row {
+  width: 372px;
+  margin: 0 auto;
+  clear: left;
+}
+.btn {
+  float: left;
+  position: relative;
+  cursor: pointer;
+  overflow: visible; 
+}
+.btn a {
+  padding: 30px 10px;
+  display: block;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.btn a img {
+  height: 64px;
+  width: 64px;
+}
+
+.alert {
+  clear: left;
+  width: 372px;
+  margin: auto 0;
+  padding: 30px;
+  border: 2px double;
+  margin: 50px;
+  text-align: center;
+}
+
