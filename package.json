@@ -1,0 +1,11 @@
+{
+  "name": "riders-hack",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "bower": "~1.2.8"
+  }
+}
