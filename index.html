@@ -24,7 +24,7 @@
       <div class="page-container">
         <div id="map" class="full-page"></div>
       </div>
-      <div id="summary" class="summary-bar">
+      <div id="summary" class="summary-bar container">
         <div class="flexbox full-page">
           <div class="flexbox-item">
             <h1>Name of Town</h1>
@@ -39,7 +39,105 @@
       </div>
     </div>
     <div id="detail-screen" class="full-page screen out-right">
-      <h1>Name of Town</h1>
+      <div class="full-scroll container">
+        <h1 class="text-brand">Name of Town</h1>
+        <hr />
+        <div class="town-info clearfix">
+          <div class="town-info-item float-left">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/population.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="population" value="133" />
+                <label for="population">Inhabitants</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item float-left">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/female.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="female" value="59" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item float-left">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/male.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="male" value="74" />
+                <label for="male">Male</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="town-info clearfix">
+          <div class="town-info-item">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/pregnancy.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="pregnancy" value="3" />
+                <label for="pregnancy">Pregnant Women</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/baby.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="baby" value="7" />
+                <label for="baby">Immunizations Needed</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/blood.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="blood" value="10" />
+                <label for="blood">Blood Tests Needed</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/medicine.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="medicine" value="14" />
+                <label for="medicine">General Medicine Help</label>
+              </div>
+            </div>
+          </div>
+          <div class="town-info-item">
+            <div class="flexbox">
+              <div class="flexbox-item town-info-icon vertical-center">
+                <img src="icons/hiv.png" width="30" />
+              </div>
+              <div class="flexbox-item">
+                <input id="hiv" value="3" />
+                <label for="hiv">HIV+</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+      </div>
     </div>
 
     <script src="bower_components/leaflet-dist/leaflet-src.js"></script>

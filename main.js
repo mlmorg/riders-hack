@@ -35,7 +35,7 @@
         that.lastMarker.defaultIcon();
       }
       marker.setIcon(that.createIcon({ size: 'l' }));
-      that.showSummary();
+      that.showSummary()
       that.lastMarker = marker;
     });
   };
