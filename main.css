@@ -175,7 +175,6 @@ label {
 }
 
 .town-info-item.float-left {
-  float: left;
   width: 33%;
 }
 
@@ -226,6 +225,9 @@ label {
 }
 
 .vertical-center { vertical-align: middle; }
+
+.float-left { float: left; }
+.float-right { float: right; }
 
 .text-urgent { color: #e22b2b; }
 .text-brand { color: #3B74E0; }
